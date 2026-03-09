@@ -42,9 +42,20 @@ Sign up at [chatpipe.net](https://chatpipe.net), then navigate to **Settings →
 
 > **Note:** Copy the key immediately after generation. It will not be shown again. You can regenerate a new key at any time, which revokes the previous one.
 
-### 2. Configure your MCP client
+### 2. Install (one command)
 
-Add the following to your MCP client configuration:
+Run this in your terminal — replace `YOUR_API_KEY` with the key from step 1:
+
+```bash
+claude mcp add chatpipe --transport url https://api.chatpipe.net/mcp --header "Authorization: Bearer YOUR_API_KEY"
+```
+
+That's it. Restart your AI coding agent and ChatPipe tools are ready.
+
+<details>
+<summary>Manual setup (alternative)</summary>
+
+If you prefer to configure manually, add this to your MCP client config file:
 
 ```json
 {
@@ -61,6 +72,8 @@ Add the following to your MCP client configuration:
 ```
 
 Replace `YOUR_API_KEY` with the key generated in step 1.
+
+</details>
 
 ### 3. Start publishing
 
