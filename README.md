@@ -15,6 +15,10 @@
   <a href="#pricing">Pricing</a>
 </p>
 
+<p align="center">
+  <img src="demo.gif" alt="ChatPipe demo — describe, generate, publish" width="720" />
+</p>
+
 ---
 
 ChatPipe MCP is a [Model Context Protocol](https://modelcontextprotocol.io) server that lets AI coding agents publish HTML content as live, shareable web pages. Describe what you need — a dashboard, a landing page, a form — and get a public URL in seconds.
