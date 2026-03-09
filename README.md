@@ -24,8 +24,8 @@ No deployment pipelines. No hosting configuration. No domain setup. Just describ
 ## Features
 
 - **Instant publishing** — HTML to live URL in under a second
-- **Global edge delivery** — Served from Cloudflare's global edge network worldwide
-- **Access control** — Public pages or password-protected with AES-256-GCM encryption
+- **Global delivery** — Pages load fast from anywhere in the world
+- **Access control** — Public pages or password-protected with encryption
 - **Update in place** — Modify published pages without changing the URL
 - **Works with any MCP client** — Compatible with any AI coding agent that supports the Model Context Protocol
 
@@ -86,12 +86,6 @@ Publish HTML content as a live, shareable page. Returns a public URL.
 | `access`   | `string` | No       | `"public"` (default) or `"password"`             |
 | `password` | `string` | No       | Required when `access` is `"password"`           |
 
-**Response:**
-
-```
-Published! Live URL: https://api.chatpipe.net/p/{userId}/{slug}
-```
-
 ### `list_projects`
 
 List all published pages with their URLs, names, and access levels. Takes no parameters.
@@ -113,26 +107,6 @@ Permanently remove a published page.
 | Parameter | Type     | Required | Description                        |
 |-----------|----------|----------|------------------------------------|
 | `slug`    | `string` | Yes      | Slug of the page to delete         |
-
-## How It Works
-
-```
-AI coding agent (your terminal)
-        │
-        ▼  MCP protocol over HTTPS
-ChatPipe API (api.chatpipe.net/mcp)
-        │
-        ▼  Stores HTML content
-Cloudflare KV (global edge storage)
-        │
-        ▼  Serves pages
-Live URL → accessible by anyone
-```
-
-1. Your AI coding agent generates HTML based on your prompt.
-2. The agent calls `publish_page` via the MCP protocol.
-3. ChatPipe stores the HTML on Cloudflare's edge network.
-4. You receive a live URL that anyone can access — instantly.
 
 ## Use Cases
 
@@ -158,20 +132,10 @@ Manage your plan at [chatpipe.net](https://chatpipe.net).
 
 ## Security
 
-| Measure                  | Details                                                        |
-|--------------------------|----------------------------------------------------------------|
-| Transport                | All communication over HTTPS                                   |
-| Authentication           | Bearer token API keys, scoped per user                        |
-| Encryption at rest       | Password-protected pages use AES-256-GCM with PBKDF2          |
-| Key management           | Keys can be regenerated at any time; regeneration revokes the previous key |
-| Data isolation           | Each API key can only access its owner's pages                 |
-| Infrastructure           | Hosted on Cloudflare Workers                                   |
-
-## Compatibility
-
-ChatPipe MCP uses **Streamable HTTP transport** — it works with any MCP client that supports remote MCP servers over HTTPS. This includes most modern AI coding agents and IDE extensions with MCP support.
-
-> **Note:** MCP clients that only support `stdio` transport (local process spawning) are not compatible with this server. Check your client's documentation for remote server support.
+- All communication encrypted over HTTPS
+- API keys scoped per user — each key can only access its owner's pages
+- Keys can be regenerated at any time (revokes the previous key)
+- Password-protected pages are encrypted at rest
 
 ## Contributing
 
@@ -181,7 +145,6 @@ Found a bug or have a feature request? [Open an issue](https://github.com/darktw
 
 - [ChatPipe](https://chatpipe.net) — Create your account and manage projects
 - [Model Context Protocol](https://modelcontextprotocol.io) — Learn about MCP
-- [MCP Specification](https://spec.modelcontextprotocol.io) — Technical specification
 
 ## License
 
