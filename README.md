@@ -24,7 +24,7 @@ No deployment pipelines. No hosting configuration. No domain setup. Just describ
 ## Features
 
 - **Instant publishing** — HTML to live URL in under a second
-- **Global edge delivery** — Served from 200+ Cloudflare locations worldwide
+- **Global edge delivery** — Served from Cloudflare's global edge network worldwide
 - **Access control** — Public pages or password-protected with AES-256-GCM encryption
 - **Update in place** — Modify published pages without changing the URL
 - **Works with any MCP client** — Compatible with any AI coding agent that supports the Model Context Protocol
@@ -160,12 +160,12 @@ Manage your plan at [chatpipe.net](https://chatpipe.net).
 
 | Measure                  | Details                                                        |
 |--------------------------|----------------------------------------------------------------|
-| Transport                | All communication over HTTPS (TLS 1.3)                        |
+| Transport                | All communication over HTTPS                                   |
 | Authentication           | Bearer token API keys, scoped per user                        |
 | Encryption at rest       | Password-protected pages use AES-256-GCM with PBKDF2          |
 | Key management           | Keys can be regenerated at any time; regeneration revokes the previous key |
 | Data isolation           | Each API key can only access its owner's pages                 |
-| Infrastructure           | Hosted on Cloudflare Workers (SOC 2 Type II, ISO 27001)       |
+| Infrastructure           | Hosted on Cloudflare Workers                                   |
 
 ## Compatibility
 
@@ -175,7 +175,7 @@ ChatPipe MCP uses **Streamable HTTP transport** — it works with any MCP client
 
 ## Contributing
 
-Found a bug or have a feature request? [Open an issue](https://github.com/chatpipe/chatpipe-mcp/issues).
+Found a bug or have a feature request? [Open an issue](https://github.com/darktw/chatpipe-mcp/issues).
 
 ## Links
 
