@@ -21,6 +21,10 @@ ChatPipe MCP is a [Model Context Protocol](https://modelcontextprotocol.io) serv
 
 No deployment pipelines. No hosting configuration. No domain setup. Just describe and publish.
 
+<a href="https://glama.ai/mcp/servers/darktw/chatpipe-mcp">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/darktw/chatpipe-mcp/badge" alt="chatpipe-mcp MCP server" />
+</a>
+
 ## Features
 
 - **Instant publishing** — HTML to live URL in under a second
