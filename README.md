@@ -9,6 +9,10 @@
 </p>
 
 <p align="center">
+  <a href="https://glama.ai/mcp/servers/darktw/chatpipe-mcp"><img width="380" height="200" src="https://glama.ai/mcp/servers/darktw/chatpipe-mcp/badges/card.svg" alt="chatpipe-mcp MCP server" /></a>
+</p>
+
+<p align="center">
   <a href="https://chatpipe.net">Website</a> &middot;
   <a href="#quick-start">Quick Start</a> &middot;
   <a href="#available-tools">Tools</a> &middot;
