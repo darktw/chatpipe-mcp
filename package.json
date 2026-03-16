@@ -1,0 +1,20 @@
+{
+  "name": "chatpipe-mcp",
+  "version": "1.0.0",
+  "description": "Publish live web pages from your AI coding agent. Instant shareable URLs from your terminal.",
+  "main": "index.js",
+  "bin": {
+    "chatpipe-mcp": "index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": ["mcp", "ai", "publishing", "html", "web-pages", "coding-agent"],
+  "author": "darktw",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/darktw/chatpipe-mcp"
+  },
+  "homepage": "https://chatpipe.net"
+}
