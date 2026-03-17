@@ -10,7 +10,7 @@
     "start": "node index.js"
   },
   "keywords": ["mcp", "ai", "publishing", "html", "web-pages", "coding-agent"],
-  "author": "darktw",
+  "author": "Altazi Labs, Inc.",
   "license": "MIT",
   "repository": {
     "type": "git",
